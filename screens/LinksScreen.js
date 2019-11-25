@@ -15,7 +15,7 @@ import {
 
 import * as Font from "expo-font";
 import * as theme from "../theme";
-
+import { LinearGradient } from "expo-linear-gradient";
 // icons
 import LockIcon from "../assets/lock.svg";
 import LampkIcon from "../assets/lamp.svg";
@@ -28,7 +28,7 @@ import Ellipse from "../assets/Ellipse.svg";
 import EllipseTop from "../assets/EllipseTop.svg";
 import Rain from "../assets/Rain.svg";
 import Termometr from "../assets/Termometr.svg";
-
+import BlueLine from "../assets/BlueLine.svg";
 const { width, height } = Dimensions.get("window");
 const mocks = [
   {
@@ -348,6 +348,17 @@ export default class LinksScreen extends React.Component {
             backgroundColor: "#363946"
           }}
         ></View>
+        <BlueLine
+          style={[
+            styles.row,
+            {
+              position: "absolute",
+
+              marginTop: 40,
+              marginLeft: 90
+            }
+          ]}
+        />
       </View>
     );
   };
@@ -422,7 +433,8 @@ export default class LinksScreen extends React.Component {
           {
             backgroundColor: theme.colors.medium_navy,
             justifyContent: "space-around",
-            paddingHorizontal: 20
+            paddingHorizontal: 20,
+            paddingBottom: 10
           }
         ]}
       >
@@ -496,7 +508,6 @@ export default class LinksScreen extends React.Component {
       <ScrollView
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{
-          paddingBottom: theme.sizes.padding,
           backgroundColor: theme.colors.light_navy
         }}
       >
