@@ -196,7 +196,7 @@ const styles = StyleSheet.create({
   }
 });
 
-export default class LinksScreen extends React.Component {
+export default class NotificationScreen extends React.Component {
   state = {
     fontLoaded: false,
     temperature: 15
@@ -520,10 +520,10 @@ export default class LinksScreen extends React.Component {
     );
   }
 }
-LinksScreen.defaultProps = {
+NotificationScreen.defaultProps = {
   destinations: mocks
 };
-LinksScreen.navigationOptions = {
+NotificationScreen.navigationOptions = {
   header: (
     <View style={[styles.flex, styles.row, styles.header]}>
       <Text
