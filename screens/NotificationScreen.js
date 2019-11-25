@@ -532,7 +532,7 @@ NotificationScreen.navigationOptions = {
           color: theme.colors.white
         }}
       >
-        Гостинная
+        NOTIFICATION
       </Text>
     </View>
   )

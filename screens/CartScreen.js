@@ -196,7 +196,7 @@ const styles = StyleSheet.create({
   }
 });
 
-export default class UserScreen extends React.Component {
+export default class CartScreen extends React.Component {
   state = {
     fontLoaded: false,
     temperature: 15
@@ -520,10 +520,10 @@ export default class UserScreen extends React.Component {
     );
   }
 }
-UserScreen.defaultProps = {
+CartScreen.defaultProps = {
   destinations: mocks
 };
-UserScreen.navigationOptions = {
+CartScreen.navigationOptions = {
   header: (
     <View style={[styles.flex, styles.row, styles.header]}>
       <Text
@@ -532,7 +532,7 @@ UserScreen.navigationOptions = {
           color: theme.colors.white
         }}
       >
-        UserScreen
+        CartScreen
       </Text>
     </View>
   )

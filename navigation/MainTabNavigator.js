@@ -9,7 +9,7 @@ import TabBarIcon from "../components/TabBarIcon";
 import HomeScreen from "../screens/HomeScreen";
 import NotificationScreen from "../screens/NotificationScreen";
 import UserScreen from "../screens/UserScreen";
-import SettingsScreen from "../screens/SettingsScreen";
+import CartScreen from "../screens/CartScreen";
 
 const config = Platform.select({
   web: { headerMode: "screen" },
@@ -58,15 +58,15 @@ NotificationStack.navigationOptions = {
 
 NotificationStack.path = "";
 
-const SettingsStack = createStackNavigator(
+const CartStack = createStackNavigator(
   {
-    Settings: SettingsScreen
+    Cart: CartScreen
   },
   config
 );
 
-SettingsStack.navigationOptions = {
-  tabBarLabel: "Settings",
+CartStack.navigationOptions = {
+  tabBarLabel: "Cart",
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
@@ -75,7 +75,7 @@ SettingsStack.navigationOptions = {
   )
 };
 
-SettingsStack.path = "";
+CartStack.path = "";
 
 const UserStack = createStackNavigator(
   {
@@ -100,7 +100,7 @@ const tabNavigator = createBottomTabNavigator(
   {
     HomeStack,
     NotificationStack,
-    SettingsStack,
+    CartStack,
     UserStack
   },
   {
